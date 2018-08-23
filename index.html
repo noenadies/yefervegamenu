@@ -71,6 +71,13 @@ bttwi.scale.set(0.2);
 bttwi.pivot.add(5, 5)
 
 
+bttwi.inputEnabled = true;
+bttwi.input.useHandCursor = true;
+
+
+bttwi.events.onInputDown.add(btacttwi, this);
+
+
 
 }
 
@@ -84,6 +91,13 @@ function btactface () {
   location.href="https://www.facebook.com/";
 
 }
+function btacttwi () {
+
+  location.href="https://twitter.com/yefer_vega";
+
+}
+
+
    function update()
 {console.log(11);
     // Move sprite up and down smoothly for show
