@@ -42,10 +42,12 @@ function preload() {
   
     game.load.image('btface','btface.png');
     game.load.image('bttwi','bttw.png');
+    game.load.image('btnotic','btnoti.png');
 
 }
 var btfa;
 var bttwi;
+var btnotic;
 
 
 
@@ -78,14 +80,23 @@ bttwi.input.useHandCursor = true;
 bttwi.events.onInputDown.add(btacttwi, this);
 
 
+btnotic = game.add.sprite(w/2,h/2,  'btnotic');
+   
+btnotic.scale.set(0.2);
+btnotic.pivot.add(5, 5)
+
+
+btnotic.inputEnabled = true;
+btnotic.input.useHandCursor = true;
+
+
+btnotic.events.onInputDown.add(btactnot, this);
+
 
 }
 
 
-function fbtfa_onDown(){
 
-    alert(222);
-}
 function btactface () {
 
   location.href="https://www.facebook.com/";
@@ -95,15 +106,25 @@ function btacttwi () {
 
   location.href="https://twitter.com/yefer_vega";
 
-}
 
+
+}
+function btactnot () {
+
+  location.href="https://twitter.com/yefer_vega";
+
+
+
+}
 
    function update()
 {console.log(11);
     // Move sprite up and down smoothly for show
   // btfa.rotation=0.09+btfa.rotation; 
-  Phaser.Point.rotate(btfa.pivot, 0, 0, 1, true, 500);
-  Phaser.Point.rotate(bttwi.pivot, 0, 0, 1, true, 100);
+  Phaser.Point.rotate(btfa.pivot, 0, 0, 1, true,700);
+  Phaser.Point.rotate(bttwi.pivot, 0, 0, 0.7, true,500);
+ Phaser.Point.rotate(btnotic.pivot, 0, 0, -0.5, true, 300);
+
 }  
         </script>
 
