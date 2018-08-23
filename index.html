@@ -43,18 +43,19 @@ function preload() {
     game.load.image('btface','btface.png');
     game.load.image('bttwi','bttw.png');
     game.load.image('btnotic','btnoti.png');
+    game.load.image('blogo','logo.png');
 
 }
 var btfa;
 var bttwi;
 var btnotic;
 
-
+var bblogo;
 
 function create() {
 
-    game.stage.backgroundColor = '#182d3b';
-
+    game.stage.backgroundColor = '#009fe3';
+//#009fe3
 btfa = game.add.sprite(w/2,h/2,  'btface');
    
 btfa.scale.set(0.2);
@@ -92,9 +93,11 @@ btnotic.input.useHandCursor = true;
 
 btnotic.events.onInputDown.add(btactnot, this);
 
+bblogo = game.add.sprite(w/2-w/2*0.8,h*0.0003,  'blogo');
 
+bblogo.scale.set(w*0.0005,w*0.0002);
 }
-
+//w*0.00091,h*0.0001
 
 
 function btactface () {
