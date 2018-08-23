@@ -34,12 +34,14 @@
        var w = window.innerWidth;
 var h = window.innerHeight; 
 
-var game = new Phaser.Game(w, h, Phaser.AUTO, 'phaser-example', { preload: preload, create: create });
+var game = new Phaser.Game(w, h, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update  });
+
 
 function preload() {
 
-    game.load.spritesheet('button', 'assets/buttons/button_sprite_sheet.png', 193, 71);
+  
     game.load.image('btface','btface.png');
+    game.load.image('bttwi','bttw.png');
 
 }
 var btfa;
@@ -51,8 +53,15 @@ function create() {
 
     game.stage.backgroundColor = '#182d3b';
 
- 
-    btfa = game.add.button(game.world.centerX - 95, 400, 'btface', btactface, this, 2, 1, 0);
+btfa = game.add.sprite(w/2,h/2,  'btface');
+   
+btfa.scale.set(0.2);
+btfa.pivot.add(5, 5)
+
+bttwi = game.add.sprite(w/2,h/2,  'bttwi');
+   
+bttwi.scale.set(0.2);
+bttwi.pivot.add(5, 5)
 
 
 
@@ -65,7 +74,13 @@ function btactface () {
   location.href="https://www.facebook.com/";
 
 }
-        
+   function update()
+{console.log(11);
+    // Move sprite up and down smoothly for show
+  // btfa.rotation=0.09+btfa.rotation; 
+  Phaser.Point.rotate(btfa.pivot, 0, 0, 1, true, 500);
+  Phaser.Point.rotate(bttwi.pivot, 0, 0, 1, true, 100);
+}  
         </script>
 
     </body>
