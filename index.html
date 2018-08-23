@@ -58,6 +58,13 @@ btfa = game.add.sprite(w/2,h/2,  'btface');
 btfa.scale.set(0.2);
 btfa.pivot.add(5, 5)
 
+btfa.inputEnabled = true;
+btfa.input.useHandCursor = true;
+
+
+btfa.events.onInputDown.add(btactface, this);
+
+
 bttwi = game.add.sprite(w/2,h/2,  'bttwi');
    
 bttwi.scale.set(0.2);
@@ -68,7 +75,10 @@ bttwi.pivot.add(5, 5)
 }
 
 
+function fbtfa_onDown(){
 
+    alert(222);
+}
 function btactface () {
 
   location.href="https://www.facebook.com/";
