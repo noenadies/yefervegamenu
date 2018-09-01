@@ -1,6 +1,6 @@
 
 var resu="22";
-//resu=window.Android.showToast("logeado","vndpadre","vndhijo");
+resu=window.Android.showToast("logeado","vndpadre","vndhijo");
 
 ocultar("idregistro");
 
