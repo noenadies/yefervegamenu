@@ -143,7 +143,7 @@ console.log(todofire[val].whatsapp  + "  "+ todofire[val].cedula);
    if(todofire[val].whatsapp==logmimovil&&todofire[val].cedula==logmicedula){
  alert("encontrado login ");
 
- location.replace("https://noenadies.github.io/yefervegamenu/");
+ location.replace("https://noenadies.github.io/yefernoticias/");
  }
 }}
 
